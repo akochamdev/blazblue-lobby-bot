@@ -1,0 +1,32 @@
+{
+  "name": "blazblue-lobby-bot",
+  "version": "1.0.0",
+  "description": "Discord bot to manage Blazblue Centralfiction lobbies.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-commands": "ts-node deploy-commands.ts",
+    "dev": "nodemon index.ts",
+    "deploy-heroku": "git push heroku master",
+    "tsc": "tsc",
+    "postinstall": "npm run tsc",
+    "heroku-postbuild": "npm install"
+  },
+  "keywords": [],
+  "author": "Ako",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.7.0",
+    "@discordjs/rest": "^2.2.0",
+    "discord-api-types": "^0.37.65",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
